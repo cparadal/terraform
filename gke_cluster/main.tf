@@ -10,7 +10,7 @@ resource "google_container_cluster" "primary" {
   location                 = var.gke_location
   min_master_version       = var.min_master_version
   remove_default_node_pool = true
-  initial_node_count       = 1 
+  initial_node_count       = var.node_count
 
   addons_config {
     kubernetes_dashboard {
@@ -32,7 +32,7 @@ resource "google_container_node_pool" "primary_preemptible_nodes" {
   name       = var.node_pool_name
   location   = var.gke_location
   cluster    = google_container_cluster.primary.name
-  node_count = 1 
+  node_count = var.node_count
 
   node_config {
     preemptible  = true
