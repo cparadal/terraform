@@ -11,3 +11,8 @@ terraform init
 terraform plan
 terraform apply
 
+## Get cluster credentials
+```
+gcloud container clusters get-credentials gke-cluster-lab --zone=us-east1
+```
+
