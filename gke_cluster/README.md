@@ -10,6 +10,7 @@ export GOOGLE_CLOUD_KEYFILE_JSON={{path}}
 terraform init
 terraform plan
 terraform apply
+```
 
 ## Get cluster credentials
 ```
